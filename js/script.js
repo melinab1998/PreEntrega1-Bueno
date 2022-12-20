@@ -123,7 +123,6 @@ if (filtrado.length==0){
 function promedio(suma, instancias){
     
     let resultado = suma / instancias;
-    Alumno.pro = resultado;
 
     if(choice=="A"||choice=="a"){
         alert("La nota final del periodo es en promedio " + resultado);
