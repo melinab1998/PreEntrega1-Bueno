@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 16px;
+}
+
+.link{
+    color: #0899ba;
+    text-decoration: underline;
+}
+
+.loginBar{
+    background-color: #0899ba;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header__titulo{
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+.infoPrimera{
+    font-size: 25px;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.saludoInicial{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.preguntaInicial{
+    font-size: 25px;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+
+.sinPunto{
+    list-style:none;
+}
+
+.btn-info{
+    background-color: #0899ba;
+    color:white;
+    margin: 2rem;
+}
+
+.btn-outline-primary{
+    margin-top: 1rem;
+}
+
+.input{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.alert-primary{
+    margin-top: 1rem;
+}
+
+.alert-info{
+    margin-top: 1rem;
+}
+
+.calcular{
+    margin: 0;
+}
+
+.font{
+    font-size: 18px;
+    margin: 1rem 0rem 0rem 1rem;
+    text-align: center;
+}
+
+.margen{
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.btn-info{
+    padding: 0.5rem;
+}
+
+.margenCero{
+    margin:0rem;
+}
+
+#listado{
+    justify-content: center;                                                 
+}
+
+.list-group-item{
+    margin-top: 0.5rem;
+}
+
+.mod{
+    margin-bottom: 1rem;
+}

@@ -14,7 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -69,22 +70,39 @@
 
         </section>
 
-        <section id="logged" class="toggles d-none">
-            <h1 id="nombreUsuario" class="saludoInicial"></h1>
-            <p class="preguntaInicial">¿Qué vas a hacer?</p>
+            <section id="logged" class="toggles d-none font">
+                
+                <div id="seccionInicial">
+                <h1 id="nombreUsuario" class="saludoInicial"></h1>
+                <p id="preguntaInicial" class="preguntaInicial">¿Qué vas a hacer?</p>
+                </div>
+                
+
                 <section id="seccionUno" class="btn1">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="btnradio1">1-CALCULAR PROMEDIOS</label>
                         
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btnradio2">2-VER LISTA DE ESTUDIANTES</label>
+                        <label class="btn btn-outline-primary" for="btnradio2">2- VER HISTORIAL DE ESTUDIANTES</label>
                         
                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
                         <label class="btn btn-outline-primary" for="btnradio3">3-BUSCAR ALUMNO</label>
                         </div>
                 </section>
-                <section id="seccionDos" class="hidden btn2">
+
+                <section id="seccionDos">
+                    <div id="listado" class="sinPunto list-group list-group-horizontal">
+                    </div>
+                    <div id="busqueda" class="hidden">
+                        <h4 class="margen">Ingrese el nombre del alumno:</h4>
+                        <label for="nombreAlumno">Nombre: </label>
+                        <input type="text" name="nombreAlumno" id="nombreAlumno" required>
+                        <input type="button" id="botonBuscar" value="Buscar" class="input">
+                    </div>
+                </section>
+    
+                <section id="seccionTres" class="hidden btn2">
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnradioA" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="btnradioA">A-NOTA FINAL DE UN PERIODO</label>
@@ -94,43 +112,77 @@
                         
                         <input type="radio" class="btn-check" name="btnradio" id="btnradioC" autocomplete="off">
                         <label class="btn btn-outline-primary" for="btnradioC">C-PROMEDIO ANUAL</label>
-                        </div>
                 </section>
-                    <section id="seccionTres" class="hidden btn3">
-                        <span class="sub">¿Cuántas instancias evaluativas tuviste?</span>
-                        <label for="instancias">Instancias: </label>
-                        <input type="text" name="instancias" id="instancias" required> 
-                        <input type="button" id="botonOk" value="Enter">
-                    </section>
-                    <section id="seccionCuatro" class="hidden">
-                    </section>    
+
+                <section id="seccionCuatro" class="hidden">
+                    <h4>Ingrese la modalidad de su materia:</h4><br>
+                    <form name="f1" class="mod">
+                        <input type="radio" id="bimestre" name="modalidad" value="4" class="form-check-input">
+                        <label for="bimestre">Bimestral</label>
+                        <input type="radio" id="trimestre" name="modalidad" value="3" class="form-check-input">
+                        <label for="trimestre">Trimestral</label>
+                        <input type="radio" id="cuatrimestre" name="modalidad" value="2" class="form-check-input">
+                        <label for="cuatrimestre">Cuatrimestral</label>
+                        <input type="button" id="botonValidarB" value="Validar">
+                    </form>  
+                </section>
+
                 <section id="seccionCinco" class="hidden">
-                    <span class="sub">Califica tu desempeño en clases</span>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio1d" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="radio1d">1</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio2d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio2d">2</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio3d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio3d">3</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio4d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio4d">4</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio5d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio5d">5</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio6d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio6d">6</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio7d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio7d">7</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio8d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio8d">8</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio9d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio9d">9</label>
-                    <input type="radio" class="btn-check" name="btnradio" id="radio10d" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="radio10d">10</label>
-                    <br>
-                    <input type="button" id="botonC" value="Calcular" class="botonC">
-                    </br>
+                    <h4 class="margen">¿Cuántas materias cursaste este año?</h4><br>
+                        <label for="asignaturas">Materias: </label>
+                        <input type="text" class="mod" name="asignaturas" id="asignaturas" required> 
+                        <input type="button" id="botonValidarC" value="Validar">
                 </section>
-        </section>
+
+                <section id="seccionSeis" class="hidden btn3">
+                    <h4 class="margen">¿Cuántas instancias evaluativas tuviste?</h4>
+                    <label for="instancias">Instancias: </label>
+                    <input type="text" name="instancias" class="input" id="instancias" required>
+                    <input type="button" id="botonValidarA" value="Validar">
+                </section>
+
+                <section id="seccionSiete" class="hidden margen">
+                        <input type="button" id="botonCalcularC" value="Calcular" class="btn btn-info margenCero">
+                </section>
+
+                <section id="seccionOcho" class="hidden">
+                        <label for="materia" class="margen">Ingresa el nombre de la materia: </label>
+                        <input type="text" name="materia" class="input" id="materia" required><br>
+                        <input type="button" id="botonCalcularB" value="Calcular" class="btn btn-info margenCero">
+                </section>
+                
+                <section id="seccionNueve" class="hidden">
+                    <span>Califica tu desempeño en clases</span><br>
+                    <input type="radio" id="r1" name="radio" class="radio1 form-check-input">
+                    <label for="r1">1</label>
+                    <input type="radio" id="r2" name="radio" class="radio1 form-check-input">
+                    <label for="r2">2</label>
+                    <input type="radio" id="r3" name="radio" class="radio1 form-check-input">
+                    <label for="r3">3</label>
+                    <input type="radio" id="r4" name="radio" class="radio1 form-check-input">
+                    <label for="r4">4</label>
+                    <input type="radio" id="r5" name="radio" class="radio1 form-check-input">
+                    <label for="r5">5</label>
+                    <input type="radio" id="r6" name="radio" class="radio2 form-check-input">
+                    <label for="r6">6</label>
+                    <input type="radio" id="r7" name="radio" class="radio2 form-check-input">
+                    <label for="r7">7</label>
+                    <input type="radio" id="r8" name="radio" class="radio2 form-check-input">
+                    <label for="r8">8</label>
+                    <input type="radio" id="r9" name="radio" class="radio2 form-check-input">
+                    <label for="r9">9</label>
+                    <input type="radio" id="r10" name="radio" class="radio2 form-check-input">
+                    <label for="r10">10</label><br>
+                </section>
+                <section id="seccionDiez" class="hidden calcular">
+                    <div>
+                        <input type="button" id="botonCalcularA" value="Calcular" class="btn btn-info margenCero">
+                    </div>
+                </section>
+                <section id="seccionOnce" class="hidden">
+                    <button class="btn btn-info"  id="refresh">Volver</button>
+                </section>
+            </section>
     </main>
 
 

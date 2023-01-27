@@ -1,0 +1,8 @@
+[
+	{"nombre": "micaela", "escuela":430, "curso":"5to", "division":"a", "opcionElegida": "b", "promedioObtenido": 9},
+	{"nombre": "ana", "escuela":220, "curso":"4to", "division":"b", "opcionElegida": "c", "promedioObtenido": 8.5},
+	{"nombre": "bruno", "escuela":1200, "curso":"3ro", "division":"b", "opcionElegida": "a", "promedioObtenido": 6.2},
+	{"nombre": "luciano", "escuela":130, "curso":"1ero", "division":"a", "opcionElegida": "c", "promedioObtenido": 7.5}
+]
+
+
